@@ -1,0 +1,7 @@
+# Copy to .dev.vars (git-ignored). Two different random strings, 32+ bytes each:
+#   python3 -c 'import secrets; print(secrets.token_urlsafe(32))'
+INGEST_TOKEN=
+VIEW_TOKEN=
+# Workers AI REST: the account and a token with Workers AI permission only.
+CLOUDFLARE_ACCOUNT_ID=
+CLOUDFLARE_API_TOKEN=

@@ -1,0 +1,28 @@
+name = "jev-sscope"
+main = "src/worker.ts"
+compatibility_date = "2026-09-01"
+
+# Jev is called over the Workers AI REST endpoint with an API token (see .dev.vars.example).
+# The AI binding would be the idiomatic way in, but `wrangler dev` needs a full account
+# login to proxy it, and a Workers-AI-only token is what this project has. Add
+#   [ai]
+#   binding = "AI"
+# after `wrangler login` to try it; src/hub.ts prefers REST whenever the token is set.
+
+# The page. run_worker_first so nothing is served without the view token.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# One Durable Object holds every session: one viewer, low volume.
+[[durable_objects.bindings]]
+name = "HUB"
+class_name = "Hub"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Hub"]
+
+# Secrets (never in this file): INGEST_TOKEN, VIEW_TOKEN, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN.
+# Locally they come from .dev.vars (see .dev.vars.example).

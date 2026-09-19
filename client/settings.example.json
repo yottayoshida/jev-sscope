@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [{ "type": "command", "command": "/absolute/path/to/python3 /absolute/path/to/jev-sscope/client/hook.py", "async": true, "timeout": 10 }] }
+    ],
+    "PostToolBatch": [
+      { "hooks": [{ "type": "command", "command": "/absolute/path/to/python3 /absolute/path/to/jev-sscope/client/hook.py", "async": true, "timeout": 10 }] }
+    ],
+    "PostCompact": [
+      { "hooks": [{ "type": "command", "command": "/absolute/path/to/python3 /absolute/path/to/jev-sscope/client/hook.py", "async": true, "timeout": 10 }] }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "/absolute/path/to/python3 /absolute/path/to/jev-sscope/client/hook.py", "async": true, "timeout": 10 }] }
+    ],
+    "SessionEnd": [
+      { "hooks": [{ "type": "command", "command": "/absolute/path/to/python3 /absolute/path/to/jev-sscope/client/hook.py", "async": true, "timeout": 10 }] }
+    ]
+  }
+}

@@ -1,6 +1,9 @@
 # kept on this machine only
 local/
 
+# generated: holds absolute paths of this machine
+client/settings.json
+
 node_modules/
 .wrangler/
 .dev.vars
