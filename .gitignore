@@ -1,0 +1,8 @@
+# kept on this machine only
+local/
+
+node_modules/
+.wrangler/
+.dev.vars
+*.env
+__pycache__/
